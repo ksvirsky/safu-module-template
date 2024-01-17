@@ -1,5 +1,6 @@
 ---
 logo:
+  url: /atomica.logo.svg
   alt: atomica
 links:
   - header: Go to Atomcia
