@@ -1,6 +1,0 @@
----
-header: FAQ
-links:
-  - url: /
----
-
