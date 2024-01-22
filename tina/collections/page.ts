@@ -1,4 +1,6 @@
 import { Collection } from "tinacms";
+import { MenuField } from "../templates/menu";
+import { Tabs } from "../templates/tabs";
 
 export const PageCollection: Collection = {
   name: "page",
@@ -6,9 +8,23 @@ export const PageCollection: Collection = {
   path: "content/pages",
   format: "md",
   ui: {
-    router: () => "/",
+    router: ({ document }) => {
+      // navigate to the home page
+      if (document._sys.filename === 'home') {
+        return '/'
+      }
+
+      // navigate to the about page
+      if (document._sys.filename === 'about') {
+        return `/about`
+      }
+
+      // navigate to the post that was clicked
+      return `/page/${document._sys.filename}`
+    },
   },
   fields: [
+    MenuField,
     {
       type: "string",
       name: "header",
@@ -23,23 +39,6 @@ export const PageCollection: Collection = {
         { type: "string", name: "alt", label: "Alt Text" },
       ],
     },
-    {
-      type: "object",
-      list: true,
-      name: "links",
-      label: "Links",
-      ui: {
-        itemProps: (item) => {
-          return {
-            label: item?.header,
-          };
-        },
-      },
-      fields: [
-        { type: "string", name: "header" },
-        { type: "string", name: "description" },
-        { type: "string", name: "url" },
-      ],
-    },
+    Tabs,
   ],
 };
