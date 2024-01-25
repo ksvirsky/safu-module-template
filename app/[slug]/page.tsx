@@ -6,7 +6,7 @@ import NotFound from "../not-found";
 
 
 export default async function Home(props: { params: {slug: string; }}) {
-  const { slug } = props.params;
+  const slug = props.params.slug.replace("/", "");
 
   const faq = await client.queries.faq({ relativePath: `${slug}.md` }).catch();
   const page = await client.queries.page({ relativePath: `${!slug ? "home" : slug}.md` }).catch();
@@ -37,11 +37,11 @@ export default async function Home(props: { params: {slug: string; }}) {
   );
 }
 
-export async function generateStaticParams() {
-  const faq = await client.queries.faqConnection();
-  const page = await client.queries.pageConnection();
+// export async function generateStaticParams() {
+//   const faq = await client.queries.faqConnection();
+//   const page = await client.queries.pageConnection();
 
-  return [...faq.data.faqConnection.edges ?? [], ...page.data.pageConnection.edges ?? []].map((page) => ({
-      params: { filename: page?.node?._sys.filename },
-    }));
-}
+//   return [...faq.data.faqConnection.edges ?? [], ...page.data.pageConnection.edges ?? []].map((page) => ({
+//       params: { filename: page?.node?._sys.filename },
+//     }));
+// }
