@@ -1,5 +1,16 @@
 import { tinaField } from "tinacms/dist/react";
-import { PageItems, PageTabsItems, PageTabsItemsDashboard } from "../tina/__generated__/types";
+import {
+  PageItems,
+  PageItemsDashboard,
+  PageItemsMarketWidget,
+  PageItemsPoolWidget,
+  PageItemsText,
+  PageTabsItems,
+  PageTabsItemsDashboard,
+  PageTabsItemsMarketWidget,
+  PageTabsItemsPoolWidget,
+  PageTabsItemsText,
+} from "../tina/__generated__/types";
 import { Dashboard } from "./dashboard";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 
@@ -12,39 +23,47 @@ export function TabContent(props: { items: Array<PageItems | PageTabsItems | nul
       }
 
       if (["PageTabsItemsDashboard", "PageItemsDashboard"].includes(item.__typename)) {
+        const component = item as PageTabsItemsDashboard | PageItemsDashboard;
+
         return <div className="mb-4" key={index + item.__typename}
-          data-tina-field={tinaField(item, "dashboardItems", index)}
+          data-tina-field={tinaField(component, "dashboardItems", index)}
         ><Dashboard
-            item={item}
+            item={component}
           /></div>;
       }
       if (["PageTabsItemsText", "PageItemsText"].includes(item.__typename)) {
+        const component = item as PageTabsItemsText | PageItemsText;
+
         return <div
-          data-tina-field={tinaField(item, "content", index)}
+          data-tina-field={tinaField(component, "content", index)}
           className="mb-2 mx-6 text-gray-600 text-base md-text"
           key={index + item?.__typename}
         >
-          <TinaMarkdown content={item?.content}/>
+          <TinaMarkdown content={component?.content}/>
         </div>;
       }
       if (["PageTabsItemsMarketWidget", "PageItemsMarketWidget"].includes(item.__typename)) {
+        const component = item as PageTabsItemsMarketWidget | PageItemsMarketWidget;
+
         return <div className="mb-4 mx-6" key={index + item?.__typename}>
           <iframe
-            data-tina-field={tinaField(item, "url", index)}
+            data-tina-field={tinaField(component, "url", index)}
             className="w-full"
             height={"800px"}
 
-            src={item.url ?? ""}
+            src={component.url ?? ""}
           /></div>;
       }
       if (["PageTabsItemsPoolWidget", "PageItemsPoolWidget"].includes(item.__typename)) {
+        const component = item as PageTabsItemsPoolWidget | PageItemsPoolWidget;
+
         return <div className="mb-4 mx-6" key={index + item?.__typename}>
           <iframe
-            data-tina-field={tinaField(item, "url", index)}
+            data-tina-field={tinaField(component, "url", index)}
             className="w-full"
             height={"800px"}
 
-            src={item.url ?? ""}
+            src={component.url ?? ""}
           /></div>;
       }
 

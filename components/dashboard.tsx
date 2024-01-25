@@ -1,10 +1,10 @@
 "use client";
 
 import { tinaField } from "tinacms/dist/react";
-import { PageTabsTabItemsDashboard } from "../tina/__generated__/types";
+import { PageItemsDashboard, PageTabsItemsDashboard } from "../tina/__generated__/types";
 
 export function Dashboard(props: {
-  item: PageTabsTabItemsDashboard
+  item: PageTabsItemsDashboard | PageItemsDashboard
 }) {
   const { dashboardItems, updatedAt } = props.item;
 
