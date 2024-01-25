@@ -38,7 +38,7 @@ export function TabContent(props: { items: Array<PageItems | PageTabsItems | nul
           /></div>;
       }
       if (["PageTabsItemsPoolWidget", "PageItemsPoolWidget"].includes(item.__typename)) {
-        return <div className="my-4" key={index + item?.__typename}>
+        return <div className="mb-4 mx-6" key={index + item?.__typename}>
           <iframe
             data-tina-field={tinaField(item, "url", index)}
             className="w-full"
