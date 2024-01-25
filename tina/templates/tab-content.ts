@@ -2,8 +2,8 @@ import { TinaField } from "tinacms";
 import { Dashboard } from "./dashboard";
 
 export const TabContent: TinaField = {
-  label: "Tab content",
-  name: "tabItems",
+  label: "Content",
+  name: "items",
   type: "object",
   list: true,
   templates: [
@@ -12,7 +12,14 @@ export const TabContent: TinaField = {
       name: "dashboard",
       fields: [
         Dashboard,
-        { type: "datetime", name: "updatedAt", label: "Last updated" },
+        {
+          type: "datetime",
+          name: "updatedAt",
+          label: "Last updated",
+          ui: {
+            timeFormat: "HH:mm:ss"
+          },
+        },
       ]
     },
     {

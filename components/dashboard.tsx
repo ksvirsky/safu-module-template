@@ -8,24 +8,28 @@ export function Dashboard(props: {
 }) {
   const { dashboardItems, updatedAt } = props.item;
 
-  return (
-    <div
-
-    >
-      <div className="flex w-full items-stretch justify-center">
-      {dashboardItems?.map(item => <div key={item?.title} className="flex flex-col p-1 border -mr-px border-black h-100">
-        <div
-          data-tina-field={tinaField(item!, "title")}
-        >{item?.title}</div>
-        <div
-          data-tina-field={tinaField(item!, "value")}
-          className="text-2xl mt-4 font-semibold"
-        >{item?.value}</div>
-      </div>)}
-      </div>
-      {updatedAt && <div className="flex w-full justify-end">
-        Last updated: {updatedAt}
-      </div>}
+  return (<>
+    <div className="flex rounded-lg border border-gray-300 mt-8 mx-6 items-stretch flex-wrap justify-center justify-items-stretch">
+      {dashboardItems?.map((item, index) =>
+        <div key={item?.title} className={`flex flex-col grow shrink-0 items-center py px-4 -ml-px my-8 ${index > 0 ? "border-l border-gray-300" : ""}`}>
+          <div
+            data-tina-field={tinaField(item!, "value")}
+            className="text-xl font-semibold mb-2 text-center"
+          >{item?.value}</div>
+          <div
+            className="text-sm text-center"
+            data-tina-field={tinaField(item!, "title")}
+          >{item?.title}</div>
+        </div>
+      )}
     </div>
-  );
+    {updatedAt &&
+      <div
+        className="flex w-full text-xs font-medium justify-start mx-6 my-4"
+        data-tina-field={tinaField(props.item, "updatedAt")}
+      >
+        Last updated: {new Date(updatedAt).toLocaleString()}
+      </div>
+    }
+  </>);
 }

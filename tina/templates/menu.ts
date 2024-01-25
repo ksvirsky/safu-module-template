@@ -13,7 +13,14 @@ export const MenuField: TinaField = {
       fields: [
         { type: "string", name: "title", label: "Title" },
         { type: "string", name: "url", label: "URL" },
-      ]
+      ],
+      ui: {
+        itemProps: (item) => {
+          return {
+            label: item?.title ?? "Home template",
+          };
+        },
+      },
     },
     {
       label: "Faq",
@@ -21,7 +28,14 @@ export const MenuField: TinaField = {
       fields: [
         { type: "string", name: "title", label: "Title" },
         { type: "string", name: "url", label: "URL" },
-      ]
+      ],
+      ui: {
+        itemProps: (item) => {
+          return {
+            label: item?.title ?? "Faq template",
+          };
+        },
+      },
     },
   ],
 };

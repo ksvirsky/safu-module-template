@@ -1,14 +1,14 @@
-import "./globals.css";
+import "../../app/globals.css";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Insurance Safety Module",
-  description: "Insurance Safety Module powered by Atomica",
+const metadata = {
+  title: "Self Hosted Tina App",
+  description: "A Next.js app with TinaCMS",
 };
 
-export default function RootLayout({
+export function Layout({
   children,
 }: {
   children: React.ReactNode;

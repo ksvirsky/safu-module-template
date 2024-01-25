@@ -11,21 +11,19 @@ export function Faq(props: {
   data: FaqQuery;
   variables: object;
   query: string;
-  pageData?: PageQuery;
+  homeData?: PageQuery;
 }) {
-  const { pageData } = props;
+  const { homeData } = props;
   const { data } = useTina(props);
   const [itemShownMap, setItemShownMap] = useState<Record<number, boolean>>({});
 
   return (
     <main className="flex min-h-screen flex-col items-center">
-      <PageHeader pageData={pageData} />
+      <PageHeader pageData={homeData}>
+        {homeData?.page.menuItems && <Menu items={homeData.page.menuItems} />}
+      </PageHeader>
 
-      <div className="w-full flex flex-col">
-        {data.faq.menuItems && <Menu items={data.faq.menuItems} />}
-      </div>
-
-      <div className="z-10 w-full max-w-5xl items-center justify-center font-mono text-sm flex">
+      <div className="z-10 w-full max-w-5xl items-center justify-center text-sm flex">
         <h1
           data-tina-field={tinaField(data?.faq, "header")}
           className="my-3 text-3xl"

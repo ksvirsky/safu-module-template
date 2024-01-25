@@ -1,6 +1,7 @@
 import { Collection } from "tinacms";
 import { MenuField } from "../templates/menu";
 import { Tabs } from "../templates/tabs";
+import { TabContent } from "../templates/tab-content";
 
 export const PageCollection: Collection = {
   name: "page",
@@ -14,31 +15,42 @@ export const PageCollection: Collection = {
         return '/'
       }
 
-      // navigate to the about page
-      if (document._sys.filename === 'about') {
-        return `/about`
-      }
-
-      // navigate to the post that was clicked
-      return `/page/${document._sys.filename}`
+      return `/${document._sys.filename}`
     },
   },
   fields: [
     MenuField,
+    {
+      type: "object",
+      name: "clientLogo",
+      label: "Client Logo",
+      fields: [
+        { type: "image", name: "url", label: "URL" },
+        { type: "string", name: "alt", label: "Alt Text" },
+      ],
+    },
     {
       type: "string",
       name: "header",
       label: "Header",
     },
     {
+      type: "string",
+      name: "poweredByHeader",
+      label: "Powered By Header",
+    },
+    {
       type: "object",
-      name: "logo",
-      label: "Logo",
+      name: "poweredByLogo",
+      label: "Powered By Logo",
       fields: [
         { type: "image", name: "url", label: "URL" },
         { type: "string", name: "alt", label: "Alt Text" },
       ],
     },
+
+    TabContent,
+
     Tabs,
   ],
 };

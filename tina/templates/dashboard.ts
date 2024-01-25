@@ -11,7 +11,7 @@ export const Dashboard: TinaField = {
     },
   },
   fields: [
-    { type: "string", name: "title", label: "Title" },
     { type: "string", name: "value", label: "Value" },
+    { type: "string", name: "title", label: "Title" },
   ],
 };

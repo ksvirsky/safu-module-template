@@ -14,6 +14,7 @@ export const MenuCollection: Collection = {
       name: "menuItems",
       type: "object",
       list: true,
+
       templates: [
         {
           label: "Page",

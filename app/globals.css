@@ -18,8 +18,26 @@
 
 body {
   color: rgb(var(--foreground-rgb));
+}
 
-  .tab-header--current-tab {
+.tab-header--current-tab {
 
-  }
+}
+
+.md-text a {
+  text-decoration: underline;
+}
+
+.md-text h6 {
+  text-align: center;
+  font-size: 0.75rem;
+}
+.md-text img {
+  display: inline;
+  margin: auto 0.5rem;
+}
+
+.c-menu a {
+  user-select: none;
+  -webkit-user-drag: none;
 }
