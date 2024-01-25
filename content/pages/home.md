@@ -10,7 +10,7 @@ menuItems:
     url: /buy-insurance
     _template: home
   - title: FAQ
-    url: /faq/
+    url: /faq
     _template: faq
 clientLogo:
   url: /atomica.logo.svg

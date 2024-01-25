@@ -1,5 +1,7 @@
 import { Collection } from "tinacms";
 import { MenuField } from "../templates/menu";
+import { FaqItems } from "../templates/faq-items";
+import { FaqTabs } from "../templates/faq-tabs";
 
 export const FaqCollection: Collection = {
   name: "faq",
@@ -12,29 +14,18 @@ export const FaqCollection: Collection = {
     },
   },
   fields: [
-    {
-      type: "string",
-      name: "header",
-      label: "Header",
-    },
     MenuField,
     {
-      type: "object",
-      list: true,
-      name: "items",
-      label: "FAQ Items",
-      ui: {
-        itemProps: (item) => {
-          return {
-            label: item?.header,
-          };
-        },
-      },
-      fields: [
-        { type: "string", name: "header" },
-        { type: "rich-text", name: "content" },
-        { type: "string", name: "url" },
-      ],
+      type: "string",
+      name: "title",
+      label: "Title",
+    },
+    FaqTabs,
+    FaqItems,
+    {
+      type: "rich-text",
+      name: "content",
+      label: "Text content"
     },
   ],
 };

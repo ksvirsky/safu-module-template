@@ -42,6 +42,6 @@ export default async function Home(props: { params: {slug: string; }}) {
 //   const page = await client.queries.pageConnection();
 
 //   return [...faq.data.faqConnection.edges ?? [], ...page.data.pageConnection.edges ?? []].map((page) => ({
-//       params: { filename: page?.node?._sys.filename },
+//       params: { slug: page?.node?._sys.filename },
 //     }));
 // }
