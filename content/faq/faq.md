@@ -25,7 +25,7 @@ tabs:
               future crop. While value of farmland does not change rapidly,
               there is a small probability that crop in a given year will be
               lost, up to 100% oif the crop. When that happens, there is a small
-              probabilty that the agriculatural crop producer (farmer) will not
+              probability that the agricultural crop producer (farmer) will not
               have any cash on hand to repay debt denominated in xToken, which
               introduces the risk of shortfall events for the LandX Protocol.
 
@@ -44,12 +44,12 @@ tabs:
               but still probable events.
           - header: How does the LandX Safety Module protect LNDX token holders?
             content: >
-              LNDX token holders are protected becuase market price of LNDX
+              LNDX token holders are protected because market price of LNDX
               token depends on current and future LandX Protocol fees. In turn,
               LandX Protocol fees are generated when xToken is attractive to
               mint and hold. Because LandX Safety Module protects xToken
               holders, LandX Protocol Revenue is no longer at risk of losing
-              Protocol Revenue due to natural weather risk and climate change. 
+              Protocol Revenue due to natural weather risk and climate change.
               Because LNDX Protocol Revenue is now protected, LNDX token becomes
               much safer to hold and stake for anyone who wants to participate
               in an infrastructure layer that powers the next generation of Real
@@ -57,7 +57,7 @@ tabs:
               chain.
           - header: >-
               How does the LandX Safety Module protect farmers who obtain
-              financing using Landx Protocol?
+              financing using LandX Protocol?
             content: >
               Farmers who are minting xTokens are protected because their
               repayment obligations are no longer at risk due to loss of crop
@@ -71,7 +71,7 @@ tabs:
   - title: For Projects / DAOs
 items: []
 content: >
-  ###### Safety Modules powered by   ![Atomica logo](/atomica.logo.small.svg)   
+  ###### Safety Modules powered by   ![Atomica logo](/atomica.logo.small.svg)
   © 2024 Atomica. All rights reserved.
 ---
 

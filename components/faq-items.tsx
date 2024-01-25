@@ -18,7 +18,7 @@ export function FaqItems(props: {
       return (<div key={item?.header} className={index > 0 ? "border-t border-gray-300" : ""}>
         <div
           // @ts-ignore
-          data-tina-field={tinaField(item, "header", index)}
+          data-tina-field={tinaField(item, "header")}
           className={`py-5 text-sm font-medium flex justify-between`}
           onClick={() => setItemShownMap({ ...itemShownMap, [index]: !itemShownMap[index] })}
         >
@@ -26,16 +26,16 @@ export function FaqItems(props: {
         </div>
         {itemShownMap[index] && <div
           // @ts-ignore
-          data-tina-field={tinaField(item, "content", index)}
+          data-tina-field={tinaField(item, "content")}
           className="pt-2 pb-4 text-sm font-light text-gray-700"
         >
           <TinaMarkdown content={item?.content} />
 
           {item?.url && <a
-            data-tina-field={tinaField(item, "url", index)}
+            data-tina-field={tinaField(item, "url")}
             href={item.url}
           >
-            <span data-tina-field={tinaField(item, "urlLabel", index)}>{item.urlLabel}</span>
+            <span data-tina-field={tinaField(item, "urlLabel")}>{item.urlLabel}</span>
           </a>}
         </div>}
       </div>);
