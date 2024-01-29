@@ -1,7 +1,4 @@
 ---
-logo:
-  url: /atomica.logo.svg
-  alt: atomica
 menuItems:
   - title: Stake & Earn
     url: /
