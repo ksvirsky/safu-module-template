@@ -13,12 +13,12 @@ export function Page(props: {
   query: string;
   homeData: PageQuery;
 }) {
-  const { homeData = props.data } = props;
   const { data } = useTina(props);
   const [currentTabIndex, setCurrentTabIndex] = useState(0);
+  const homeData = props.data === props.homeData ? data : props.homeData;
 
   return (
-    <main className="flex min-h-screen flex-col items-center">
+    <main className="flex min-h-screen flex-col items-center max-w-lg mx-auto">
       <PageHeader pageData={homeData}>
         {homeData?.page.menuItems && <Menu items={homeData.page.menuItems} />}
       </PageHeader>
