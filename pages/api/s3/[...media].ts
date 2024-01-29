@@ -2,8 +2,7 @@ import {
   mediaHandlerConfig,
   createMediaHandler,
 } from 'next-tinacms-s3/dist/handlers'
-
-import { isAuthorized } from '@tinacms/auth'
+import { UsernamePasswordAuthJSProvider } from 'tinacms-authjs/dist/tinacms';
 
 export const config = mediaHandlerConfig
 
@@ -22,9 +21,11 @@ export default createMediaHandler({
     }
 
     try {
-      const user = await isAuthorized(req);
+      const auth = new UsernamePasswordAuthJSProvider();
 
-      return user?.verified ?? false;
+      const isAuth = await auth.isAuthorized(req);
+
+      return isAuth;
     } catch (e) {
       console.error(e);
 
