@@ -8,9 +8,9 @@ import NotFound from "../not-found";
 export default async function Home(props: { params: {slug: string; }}) {
   const slug = props.params.slug.replace("/", "");
 
-  const faq = await client.queries.faq({ relativePath: `${slug}.md` }).catch();
-  const page = await client.queries.page({ relativePath: `${!slug ? "home" : slug}.md` }).catch();
-  const home = await client.queries.page({ relativePath: `home.md` }).catch();
+  const faq = await client.queries.faq({ relativePath: `${slug}.mdx` }).catch();
+  const page = await client.queries.page({ relativePath: `${!slug ? "home" : slug}.mdx` }).catch();
+  const home = await client.queries.page({ relativePath: `home.mdx` }).catch();
 
   if (!faq.data && !page.data) {
     return <NotFound />;
