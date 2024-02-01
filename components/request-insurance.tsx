@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { TextInput } from "./layout/text-input";
+import { TextInput } from "./text-input";
 
 export const RequestInsurance = ({title = "Request Insurance"}) => {
   const [isPopupShown, setPopupShown] = useState(false);
