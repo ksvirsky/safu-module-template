@@ -42,6 +42,7 @@ export function TabContent(props: { items: Array<PageItems | PageTabsItems | nul
         >
           <TinaMarkdown
             content={component?.content}
+            // @ts-ignore
             components={{ RequestInsurance }}
           />
         </div>;
