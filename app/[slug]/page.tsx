@@ -45,7 +45,7 @@ export default async function Home(props: { params: {slug: string; }}) {
     />
   );
 }
-
+/*
 export async function generateStaticParams() {
   const faq = await client.queries.faqConnection();
   const page = await client.queries.pageConnection();
@@ -54,3 +54,4 @@ export async function generateStaticParams() {
       params: { slug: page?.node?._sys.filename },
     }));
 }
+*/
