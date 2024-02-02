@@ -45,13 +45,12 @@ export default async function Home(props: { params: {slug: string; }}) {
     />
   );
 }
-/*
+
 export async function generateStaticParams() {
   const faq = await client.queries.faqConnection();
   const page = await client.queries.pageConnection();
 
-  return [...faq.data.faqConnection.edges ?? [], ...page.data.pageConnection.edges ?? []].map((page) => ({
+  return [...(faq.data.faqConnection.edges ?? []), ...(page.data.pageConnection.edges ?? [])].map((page) => ({
       params: { slug: page?.node?._sys.filename },
     }));
 }
-*/
