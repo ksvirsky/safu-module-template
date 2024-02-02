@@ -17,14 +17,16 @@ export const CustomTinaImageField: TinaField = {
           <div className="flex">
             <div
               className="block max-w-full rounded shadow overflow-hidden max-h-48 lg:max-h-64 h-auto object-contain transition-opacity duration-100 ease-out m-0 bg-gray-200 bg-auto bg-center bg-no-repeat min-w-[12rem]"
+              onClick={() => cms.media.open({
+                onSelect: media => {
+                  input.onChange({ target: { value: media.src } });
+                }
+              })}
             >
               {input.value && <img
                 src={input.value}
-                onClick={() => cms.media.open({
-                  onSelect: media => {
-                    input.onChange({ target: { value: media.src } });
-                  }
-                })}
+                className="w-full h-full"
+
                 alt="preview" />
               }
             </div>
