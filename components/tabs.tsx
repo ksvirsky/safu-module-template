@@ -9,7 +9,7 @@ export function Tabs(props: { component: PageItemsTabs | null | undefined }) {
   const { component } = props;
 
   return (!component ? <></> : <div>
-    {component.tabs?.length && <div className="w-full justify-center flex flex-row border-b border-gray-300 mb-4 mt-8">
+    {component.tabs?.length && <div className="mx-6 justify-center flex flex-row border-b border-gray-300 mb-4 mt-8">
       {component.tabs?.map((tab, index) => {
         return (
           <div
@@ -22,7 +22,7 @@ export function Tabs(props: { component: PageItemsTabs | null | undefined }) {
       }
     </div> || ""}
 
-    {component.tabs?.[currentTabIndex] && <div className="mx-4" data-tina-field={tinaField(component, "tabs", currentTabIndex)}>
+    {component.tabs?.[currentTabIndex] && <div className="mx-6" data-tina-field={tinaField(component, "tabs", currentTabIndex)}>
       <PageContent items={component.tabs[currentTabIndex]?.items} />
     </div>}
   </div>);

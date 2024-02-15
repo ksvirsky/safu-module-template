@@ -7,8 +7,8 @@ import { usePathname } from "next/navigation";
 export function Menu(props: { items: Array<PageMenuItems | FaqMenuItems | null> }) {
   const pathname = usePathname();
 
-  return (<div className="">
-    {props.items?.length && <div className="c-menu flex flex-row justify-center text-sm">
+  return (<div className="grow self-end">
+    {props.items?.length && <div className="c-menu w-full flex flex-row justify-center text-sm text-center">
       {props.items.map((item, index) => item && <div
         key={index}
         data-tina-field={tinaField(item, "url")}

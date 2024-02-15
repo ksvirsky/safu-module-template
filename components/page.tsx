@@ -19,7 +19,7 @@ export function Page(props: {
   return (
     <main className="flex min-h-screen flex-col items-center max-w-screen-xl mx-auto">
       <PageHeader pageData={homeData}>
-        {homeData?.page.menuItems && <div data-tina-field={tinaField(homeData.page, "menuItems")}><Menu items={homeData.page.menuItems} /></div>}
+        {homeData?.page.menuItems && <Menu items={homeData.page.menuItems} />}
       </PageHeader>
 
       <div className="w-full flex flex-col">
