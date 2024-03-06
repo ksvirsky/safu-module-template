@@ -3151,10 +3151,10 @@
   resolved "https://registry.yarnpkg.com/@tanstack/virtual-core/-/virtual-core-3.0.0.tgz#637bee36f0cabf96a1d436887c90f138a7e9378b"
   integrity sha512-SYXOBTjJb05rXa2vl55TTwO40A6wKu0R5i1qQwhJYNDIqaIGF7D0HsLw+pJAyi2OvntlEIVusx3xtbbgSUi6zg==
 
-"@tinacms/app@1.2.36":
-  version "1.2.36"
-  resolved "https://registry.yarnpkg.com/@tinacms/app/-/app-1.2.36.tgz#297aa06328ac13e0f92c07a86f1aae5f020f6911"
-  integrity sha512-0nR9qzyOAbcsmfwDCR7bk5NHcCyAGf2s7e3snxqvQQlqa1FrNhpRH4du6Sdn9xz19OYf+Vlvd4bB9Pr1B19Meg==
+"@tinacms/app@1.2.37":
+  version "1.2.37"
+  resolved "https://registry.yarnpkg.com/@tinacms/app/-/app-1.2.37.tgz#549cb0dbd5aac7b325fc95d9d16008cfddedaca0"
+  integrity sha512-szutC0FrHpM8Qr2jZFDo7FCzNL8jq691pcHuMTSYz8/nl+1P607E00bjeOd14eHwWSXXv4/c5A3AKKjIgYuDMQ==
   dependencies:
     "@codemirror/language" "6.0.0"
     "@graphiql/toolkit" "0.8.4"
@@ -3172,14 +3172,14 @@
     react-dom "17.0.2"
     react-router-dom "6.3.0"
     tailwindcss "^3.2.7"
-    tinacms "1.5.29"
+    tinacms "1.5.30"
     typescript "^4.6.4"
     zod "^3.14.3"
 
-"@tinacms/cli@^1.5.40":
-  version "1.5.40"
-  resolved "https://registry.yarnpkg.com/@tinacms/cli/-/cli-1.5.40.tgz#9dfbb76b2dd76ea7302298411e6fe88eaa0b2fc1"
-  integrity sha512-lz3SC2nzurI/Su1/ziE/VXvYAnEiDzaJTkgEyMYXtOfBv7fPjEIc01ub5owm2VamTa6hx1wQpGG/HTgPO4npmQ==
+"@tinacms/cli@^1.5.41":
+  version "1.5.41"
+  resolved "https://registry.yarnpkg.com/@tinacms/cli/-/cli-1.5.41.tgz#7111bc9132ee5f104f59500cf05616be7df75ae4"
+  integrity sha512-xB8G4vnfwHGSI+9uX1VuBz5hIwCMv/AoIYJKzVd9bEbxoRWJmosY+JjU25ZIYpb4PYylCN91MzWrR8c7byJ12Q==
   dependencies:
     "@graphql-codegen/core" "^2.1.0"
     "@graphql-codegen/plugin-helpers" latest
@@ -3195,7 +3195,7 @@
     "@tailwindcss/aspect-ratio" "^0.4.0"
     "@tailwindcss/line-clamp" "^0.3.1"
     "@tailwindcss/typography" "^0.5.9"
-    "@tinacms/app" "1.2.36"
+    "@tinacms/app" "1.2.37"
     "@tinacms/datalayer" "1.2.33"
     "@tinacms/graphql" "1.4.33"
     "@tinacms/metrics" "1.0.2"
@@ -3240,7 +3240,7 @@
     readable-stream "^4.3.0"
     rollup-plugin-visualizer "^5.9.0"
     tailwindcss "^3.2.7"
-    tinacms "1.5.29"
+    tinacms "1.5.30"
     typanion "3.13.0"
     typescript "4.3.5"
     url-pattern "^1.0.3"
@@ -10232,10 +10232,10 @@ tinacms@1.5.28:
     yup "^0.32.0"
     zod "^3.14.3"
 
-tinacms@1.5.29:
-  version "1.5.29"
-  resolved "https://registry.yarnpkg.com/tinacms/-/tinacms-1.5.29.tgz#779f085fa0604032fdeb22b6985ca711c81df6f5"
-  integrity sha512-JbAkh19cr4aNuzXRwoXYCLRLAVVZsovv4Lu8QmejS3HsOZrdBEYAsV86YpRz1JeepBytFkwFxAKe/qK+p32IHA==
+tinacms@1.5.30:
+  version "1.5.30"
+  resolved "https://registry.yarnpkg.com/tinacms/-/tinacms-1.5.30.tgz#c228614c90c9d7283f0d68810a80d4aa4debd2f3"
+  integrity sha512-vho540vCEuMSo/eyxBlpVqJZy/LASliG2t2zGHAHKVpm4+GWardQV3xDONEN+btRFbe9UF/3cg6hCvYVGAwGug==
   dependencies:
     "@floating-ui/dom" "^1.4.4"
     "@floating-ui/react-dom" "^2.0.1"
