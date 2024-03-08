@@ -89,7 +89,7 @@ export function PageContent(props: { items: Array<PageItems | PageItemsTabsTabsI
         const component = item as PageItemsTabsTabsItemsCustomWidget | PageItemsCustomWidget;
         const widgetProps = parseProps(component?.widgetProps);
 
-        return <div className="mb-4 mx-6" key={index + item?.__typename} data-tina-field={tinaField(component, "url")}>
+        return <div className="mb-4 mx-6" key={index + item?.__typename} data-tina-field={tinaField(component, "widgetProps")}>
           <div className="rm-widget"
           {...widgetProps}
           />
