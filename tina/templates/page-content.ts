@@ -57,6 +57,13 @@ export const PageContent: TinaField = {
       ]
     },
     {
+      label: "Custom Widget",
+      name: "customWidget",
+      fields: [
+        { type: "string", name: "widgetProps", label: "Widget props" },
+      ]
+    },
+    {
       label: "Tabs",
       name: "tabs",
       fields: [

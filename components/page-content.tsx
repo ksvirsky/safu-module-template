@@ -4,11 +4,13 @@ import {
   PageItemsDashboard,
   PageItemsMarketWidget,
   PageItemsPoolWidget,
+  PageItemsCustomWidget,
   PageItemsTabs,
   PageItemsTabsTabsItems,
   PageItemsTabsTabsItemsDashboard,
   PageItemsTabsTabsItemsMarketWidget,
   PageItemsTabsTabsItemsPoolWidget,
+  PageItemsTabsTabsItemsCustomWidget,
   PageItemsTabsTabsItemsText,
   PageItemsText,
 } from "../tina/__generated__/types";
@@ -83,7 +85,32 @@ export function PageContent(props: { items: Array<PageItems | PageItemsTabsTabsI
           /></div>;
       }
 
+      if (["PageItemsTabsTabsItemsCustomWidget", "PageItemsCustomWidget"].includes(item.__typename)) {
+        const component = item as PageItemsTabsTabsItemsCustomWidget | PageItemsCustomWidget;
+        const widgetProps = parseProps(component?.widgetProps);
+
+        return <div className="mb-4 mx-6" key={index + item?.__typename} data-tina-field={tinaField(component, "url")}>
+          <div className="rm-widget"
+          {...widgetProps}
+          />
+        </div>;
+      }
+
       return <></>;
     })}
   </>);
+}
+
+const parseProps = (strProps: string | undefined | null): any => {
+  if (!strProps) {
+    return undefined;
+  }
+
+  try {
+    const props = JSON.parse(strProps);
+
+    return props;
+  } catch (e) {
+    return undefined;
+  }
 }
