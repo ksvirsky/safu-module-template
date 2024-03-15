@@ -65,6 +65,7 @@ export function PageContent(props: { items: Array<PageItems | PageItemsTabsTabsI
 
         return <div className="mb-4 mx-6" key={index + item?.__typename} data-tina-field={tinaField(component, "url")}>
           <iframe
+            suppressHydrationWarning
             allow="solana; ethereum"
             className="w-full"
             height={"800px"}
@@ -77,6 +78,7 @@ export function PageContent(props: { items: Array<PageItems | PageItemsTabsTabsI
 
         return <div className="mb-4 mx-6" key={index + item?.__typename} data-tina-field={tinaField(component, "url")}>
           <iframe
+            suppressHydrationWarning
             allow="solana; ethereum"
             className="w-full"
             height={"800px"}
@@ -90,7 +92,9 @@ export function PageContent(props: { items: Array<PageItems | PageItemsTabsTabsI
         const widgetProps = parseProps(component?.widgetProps);
 
         return <div className="mb-4 mx-6" key={index + item?.__typename} data-tina-field={tinaField(component, "widgetProps")}>
-          <div className="rm-widget"
+          <div
+            suppressHydrationWarning
+            className="rm-widget"
           {...widgetProps}
           />
         </div>;
