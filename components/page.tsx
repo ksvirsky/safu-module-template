@@ -17,7 +17,7 @@ export function Page(props: {
   const homeData = (!props.homeData || props.data === props.homeData) ? data : props.homeData;
 
   return (
-    <main suppressHydrationWarning className="flex min-h-screen flex-col items-center max-w-screen-xl mx-auto">
+    <main className="flex min-h-screen flex-col items-center max-w-screen-xl mx-auto">
       <PageHeader pageData={homeData}>
         {homeData?.page.menuItems && <Menu items={homeData.page.menuItems} />}
       </PageHeader>
