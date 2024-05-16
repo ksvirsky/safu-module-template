@@ -65,7 +65,7 @@ export function PageContent(props: { items: Array<PageItems | PageItemsTabsTabsI
 
         return <div className="mb-4 mx-6" key={index + item?.__typename} data-tina-field={tinaField(component, "url")}>
           <iframe
-            allow="solana; ethereum"
+            allow="solana; ethereum; clipboard-read; clipboard-write"
             className="w-full"
             height={"800px"}
 
@@ -77,7 +77,7 @@ export function PageContent(props: { items: Array<PageItems | PageItemsTabsTabsI
 
         return <div className="mb-4 mx-6" key={index + item?.__typename} data-tina-field={tinaField(component, "url")}>
           <iframe
-            allow="solana; ethereum"
+            allow="solana; ethereum; clipboard-read; clipboard-write"
             className="w-full"
             height={"800px"}
 
